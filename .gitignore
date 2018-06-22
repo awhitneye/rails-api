@@ -67,4 +67,5 @@ node_modules
 
 ### API Keys and Config Files ###
 .env
+/config/local_env.yml
 
