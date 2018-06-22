@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+messages = Messages.create([
+    {
+        author: "awhitneye",
+        body: "hello@341! world"
+    },
+    {
+        author: "<h1>Did you escape me?!</h1>"
+        body:"hello world."
+    }
+]);
