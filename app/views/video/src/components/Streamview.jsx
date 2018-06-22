@@ -10,7 +10,7 @@ function Streamview(props) {
   return (
       <div>
         <div className="col-md-7">
-          <Video currentStream={props.currentStream} />
+          <Video currentStream={props.currentStream} toggleSearch={props.toggleSearch}/>
           Current Stream video can go here
         </div>
         <div className="col-md-5">
