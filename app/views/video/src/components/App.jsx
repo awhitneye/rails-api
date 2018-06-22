@@ -61,7 +61,8 @@ class App extends React.Component {
       <div>
         <nav className="navbar">
           <div className="col-md-6 offset-md-3">
-            Search bar can go here to find list of Streams
+            User Sessions (Google OAuth) can go here.
+            Search bar can also go here to find list of Streams
           </div>
         </nav>
         <div className="row">
