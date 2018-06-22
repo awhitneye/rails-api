@@ -1,7 +1,7 @@
 const path = require('path');
 
-const appDir = path.resolve(__dirname, 'src');
-const buildDir = path.resolve(__dirname, 'public/dist');
+const appDir = path.resolve(__dirname, 'app/views/video/src');
+const buildDir = path.resolve(__dirname, 'app/views/video/dist');
 
 module.exports = {
   entry: `${appDir}/index.jsx`,
