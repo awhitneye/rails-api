@@ -7,11 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 messages = Messages.create([
     {
-        author: "awhitneye",
+        author: "seedz",
         body: "hello@341! world"
     },
     {
-        author: "<h1>Did you escape me?!</h1>"
+        author: "seedzN00b"
         body:"hello world."
     }
 ]);
