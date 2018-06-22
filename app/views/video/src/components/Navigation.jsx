@@ -2,22 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import url from 'url';
 import axios from 'axios';
-
-import style from '../styles/app.css';
-
-import Navigation from './Navigation';
-import Video from './Video.jsx';
-import Streamview from './Streamview.jsx';
-import Loginview from './Loginview.jsx';
+import style from '../styles/navigation.css';
+// import ChatList from './components/ChatList';
 // import dummy from 'somewhere'  <-- exampleStreamData
 
-class App extends React.Component {
+class Navigation extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       // streamList: [],
       currentStream: {},
-      currentUser: '',
       autoplay: 1,
     }; 
   }
@@ -44,43 +38,53 @@ class App extends React.Component {
     //   });
   }
 
+  changeStream(selectedStream) {
+    // takes a selected Stream object and will change the "currentStream"
+    this.setState({
+      currentStream: selectedStream
+    });
+  }
+
+  changeStreamList(data) {
+    this.setState({
+      // streamList: data, 
+      currentStream: data[0],
+    });
+  }
+
+  autoPlayChange() {
+    this.setState({autoplay: +!this.state.autoplay});
+  }
+
   render() {
-    const isLoggedIn = this.state.currentUser;
-    let view;
-  
-    if (isLoggedIn) {
-      view = <Streamview 
-                currentStream={this.state.currentStream} 
-                currentUser={this.state.currentUser} 
-              />;
-    } else {
-      view = <Loginview />
-    }
-    
     return (
       <div>
         <nav className="navbar">
           <div className="col-md-6 offset-md-3">
-            <Navigation currentUser={this.state.currentUser} />
             User Sessions (Google OAuth) can go here.
             Search bar can also go here to find list of Streams
           </div>
         </nav>
         <div className="row">
-          {view}
-          Streamview can go here. Conditionally render
-          Streams if a user is logged in, or
-          a Log in page is no one is logged in yet.
+          <div className="col-md-7">
+            Current Stream video can go here
+          </div>
+          <div className="col-md-5">
+            Chat List can go here
+          </div>
+          <div className="col-md-5">
+            Related Streams can go here
+          </div>
         </div>
       </div>
     );
   }
 }
 
-App.propTypes = {
+Navigation.propTypes = {
 };
 
-App.defaultProps = {
+Navigation.defaultProps = {
 };
 
-export default App;
+export default Navigation;
