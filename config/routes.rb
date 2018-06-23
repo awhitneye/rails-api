@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  namespace :api do
-    namespace :v1 do
-      resources :messagescd  
-    end
-  end
+  root to: 'video#index'
+  get '/auth/:provider/callback', to: 'sessions#create'
+  get '/:video_id/', to: 'video#show'
+  get '/messages/:chat_id', to: 'messages#index'
+  get '/messages/search/:query', to: 'messages#search'
+  delete '/logout', to: 'sessions#destroy'
+  match '*path' => redirect('/'), via: :get
 end
