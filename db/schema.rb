@@ -10,13 +10,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_22_170940) do
+ActiveRecord::Schema.define(version: 20180407214546) do
 
-  create_table "messages", force: :cascade do |t|
-    t.string "author"
-    t.string "body"
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "videos", force: :cascade do |t|
+    t.string "video_id"
+    t.string "title"
+    t.string "concurrent_viewers"
+    t.string "chat_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+  
+  create_table "messages", force: :cascade do |t|
+    t.string "message_id"
+    t.string "author"
+    t.string "author_image"
+    t.string "body"
+    t.string "chat_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "provider", null: false
+    t.string "uid", null: false
+    t.string "name"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "image_url"
+    t.string "token"
+    t.string "refresh_token"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["provider", "uid"], name: "index_users_on_provider_and_uid", unique: true
+    t.index ["provider"], name: "index_users_on_provider"
+    t.index ["uid"], name: "index_users_on_uid"
   end
 
 end
