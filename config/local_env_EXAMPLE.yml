@@ -9,7 +9,11 @@
 # For example, setting:
 # GMAIL_USERNAME: 'Your_Gmail_Username'
 # makes 'Your_Gmail_Username' available as ENV["GMAIL_USERNAME"]
-#
+GMAIL_USERNAME: 'Your_Gmail_Username',
+
+
 # For the purposes of this application, Youtube API keys and Google authentication
 # that should not be pushed to git should be included here.
 # AFTER RENAMING, OF COURSE!
+GOOGLE_CLIENT_ID: 'Clients_Google_Username',
+GOOGLE_CLIENT_SECRET: 'Clients_Google_Pass'
