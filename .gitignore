@@ -24,3 +24,48 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+### OSX ###
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+### Node ###
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+pids
+logs
+results
+
+### JEST ###
+coverage
+
+### WEBPACK ###
+public/dist
+
+### NPM ###
+npm-debug.log
+node_modules
+
+### PhPStorm ###
+.idea/
+
+### API Keys and Config Files ###
+.env
+/config/local_env.yml
+
