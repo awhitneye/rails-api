@@ -1,0 +1,15 @@
+# Rename this file to local_env.yml
+# Renaming will allow git to ignore this file.
+#
+# Add account settings and API keys here.
+# This file should be listed in .gitignore to keep your settings secret!
+# Each entry gets set as a local environment variable.
+# This file overrides ENV variables in the Unix shell.
+#
+# For example, setting:
+# GMAIL_USERNAME: 'Your_Gmail_Username'
+# makes 'Your_Gmail_Username' available as ENV["GMAIL_USERNAME"]
+#
+# For the purposes of this application, Youtube API keys and Google authentication
+# that should not be pushed to git should be included here.
+# AFTER RENAMING, OF COURSE!
