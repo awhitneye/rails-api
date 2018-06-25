@@ -2,6 +2,10 @@ require 'google/apis/youtube_v3'
 require 'google/api_client/client_secrets'
 
 class MessagesController < ApplicationController
+  #inherits from the application controller
+  #puts s the standard index, should probably eventually
+  #include other standard actions (create, delete, destroy) 
+  def index
   def index
     secrets = Google::APIClient::ClientSecrets.new(
       {

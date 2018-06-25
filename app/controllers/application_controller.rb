@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+  #We are requesting json data and not default html
 
   helper_method :current_user, :current_video
 

@@ -2,6 +2,10 @@ require 'google/apis/youtube_v3'
 require 'google/api_client/client_secrets'
 
 class VideoController < ApplicationController
+  #inherits from the application controller
+  #puts s the standard index, should probably eventually
+  #include other standard actions (create, delete, destroy)
+
   layout false
 
   def new_service
